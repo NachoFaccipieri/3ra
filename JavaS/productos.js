@@ -1,4 +1,4 @@
-const vecLibros = [
+let vecLibros = [
     {
         id: 1,
         nombre: 'Harry Potter',

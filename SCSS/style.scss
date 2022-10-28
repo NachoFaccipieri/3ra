@@ -58,5 +58,89 @@ img{
     max-height: 100%;
 }
 
+.text-center{
+    margin-top: 25px;
+}
+
+.HomeBtn{
+    background-color:rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 6px;
+    border-radius: 3px;
+    margin-top: 13px;
+}
+
+.comprar, .removerTodo{
+    background-color: rgba(0, 175, 0, 0.74);
+    color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.774);
+    font-size: 17px;
+    font-weight:490;
+    margin: 5px;
+    padding: 6px;
+    border-radius: 3px;
+}
+
+.removerTodo{
+    background-color: red;
+}
+
+.bi-bookmark-x{
+    font-size: 30px;
+    color: red;
+}
+
+.carritoDeCompras{
+    display: grid;
+    grid-template-columns: (1,320px);
+    justify-content: center;
+}
+
+.aPagar{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+.item{
+    width: 350px;
+    display: flex;
+    margin: 8px;
+    border: 1.7px solid black;
+    border-radius: 5px;
+
+
+    .Titulo{
+        width: 240px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .TituloYP{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .itemPrecio{
+        font-size: 20px;
+        height: 30px;
+        background-color: rgba(36, 35, 35, 0.904);
+        color: rgb(255, 255, 255);
+        border-radius: 3px;
+    }
+    
+    .title{
+        font-size: 25px;
+        font-weight:normal;
+        margin: 5px;
+    }
+    
+}
+
+
+
 
 

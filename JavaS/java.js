@@ -38,6 +38,7 @@ function agregarAlCarrito(libro){
     carrito.push(libro);
     console.table(carrito);
     let precioTotal = carrito.reduce((acumulador, lib) => acumulador+lib.precio,0)
+    /*
     document.getElementById("tablaBody").innerHTML += `
     <tr>
         <td>${libro.id}</td>
@@ -45,11 +46,13 @@ function agregarAlCarrito(libro){
         <td>${libro.precio}</td>
     </tr>    
     `;
+    */
     localStorage.setItem("Carrito",JSON.stringify(carrito));
-    document.getElementById("total").innerText = "Total a pagar: $"+precioTotal;
 }
 
 
 
 
 mostrarProductos();
+let sumarIcono = document.getElementById("cantidad");
+sumarIcono.innerHTML = (carrito.length);
