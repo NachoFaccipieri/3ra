@@ -47,4 +47,28 @@ let vecLibros = [
         precio: 3350,
         categorias:["Ficcion", "Novela"]
     },
+    {
+        id: 7,
+        nombre: 'Los juegos del hambre', 
+        autor:'Suzanne Collins', 
+        foto: "https://loresumo.com/wp-content/uploads/2019/11/libro-los-juegos-del-hambre-de-suzanne-collins-D_NQ_NP_970781-MLA26116136809_102017-F-1-677x1024.jpg",
+        precio: 5249,
+        categorias:["Ficcion"]
+    },
+    {
+        id: 8,
+        nombre: 'Maze Runner', 
+        autor:'James Dashner', 
+        foto: "https://contentv2.tap-commerce.com/cover/large/9789876122672_1.jpg?id_com=1113",
+        precio: 3200,
+        categorias:["Ficcion", "Suspenso"]
+    },
+    {
+        id: 9,
+        nombre: 'Mi planta naranja lima', 
+        autor:'José Mauro de Vasconcelos', 
+        foto: "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/471750.jpg",
+        precio: 1790,
+        categorias:["Ficcion", "Novela"]
+    },
 ]

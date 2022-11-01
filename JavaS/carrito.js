@@ -5,14 +5,16 @@ let carrito = JSON.parse(localStorage.getItem("Carrito")) || [];
 let sumarIcono = document.getElementById("cantidad");
 sumarIcono.innerHTML = (carrito.length);
 
+//Según vayamos agregando elementos al carrito, con esta función generamos la visualización de los mismos en un segundo HTML
 let generarItem = () => {
+    
+
     if(carrito.length !== 0){
         return (carritoCompras.innerHTML = carrito.map((x) => {
-            let {id, item} = x;
+            let {id, nombre, precio} = x;
             //let search = vecLibros.find((y) => y.id === id) || [];
-            
-            return `
 
+            return `
             <div class="item">
                 <img width="100" src="${x.foto}" alt="...">
                 
@@ -29,6 +31,7 @@ let generarItem = () => {
         })
         .join(""));
 
+        //Si el carrito está vacío genero un cartel avisandolo y un botón para volver a la página principal
     }else{
         carritoCompras.innerHTML = ``;
         aPagar.innerHTML = `
@@ -41,6 +44,7 @@ let generarItem = () => {
 
 };
 
+//Función que permite eliminar todos los objetos del carrito con 1 solo botón
 let remover= (id) => {
     let idseleccionado = id;
     carrito = carrito.filter((x) => x.id !== idseleccionado);

@@ -4,6 +4,7 @@ let carrito = JSON.parse(localStorage.getItem("Carrito")) || [];
 let mostrar  = false;
 
 
+//Utilizo el vector vecLibros que se encuentra en el js "productos" y muestro los productos en pantalla
 function mostrarProductos(){
     for(const libro of vecLibros){
         prods.innerHTML += `
@@ -21,7 +22,8 @@ function mostrarProductos(){
         `;
     }
 
-    //Eventos
+
+    //Evento: Cuando aprieto en el boton "comprar" se agrega al carrito
 
     vecLibros.forEach((libro) => {
         //Escucho el evento de apretar click. Creo una funcion anonima para poder llamar a la funcion "agregar al carrito" dado que no se pueden pasar parametros desde "add event listener"
@@ -33,21 +35,13 @@ function mostrarProductos(){
     })
 }
 
-
+//Funcion que agrega el libro que queremos comprar al carrito
 function agregarAlCarrito(libro){
-    carrito.push(libro);
-    console.table(carrito);
-    let precioTotal = carrito.reduce((acumulador, lib) => acumulador+lib.precio,0)
-    /*
-    document.getElementById("tablaBody").innerHTML += `
-    <tr>
-        <td>${libro.id}</td>
-        <td>${libro.nombre}</td>
-        <td>${libro.precio}</td>
-    </tr>    
-    `;
-    */
-    localStorage.setItem("Carrito",JSON.stringify(carrito));
+        carrito.push(libro);
+        console.table(carrito);
+        //let precioTotal = carrito.reduce((acumulador, lib) => acumulador+lib.precio,0)
+        localStorage.setItem("Carrito",JSON.stringify(carrito));
+
 }
 
 
