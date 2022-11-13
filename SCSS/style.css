@@ -174,14 +174,14 @@ img {
 }
 
 .item {
-  width: 350px;
+  width: 400px;
   display: flex;
   margin: 8px;
   border: 1.7px solid black;
   border-radius: 5px;
 }
 .item .Titulo {
-  width: 240px;
+  width: 300px;
   display: flex;
   justify-content: space-between;
 }
