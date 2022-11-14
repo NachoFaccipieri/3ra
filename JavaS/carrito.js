@@ -54,8 +54,8 @@ let generarItem = () => {
 //Función que cree para que se visualice el total a pagar y dos botones funcionales: Comprar y RemoverTodo. Cada cual llama a su respectiva función. Tanto para comprar como para remover se pide una confirmación 
 function precioTotalYBotones(){
 
-    //Tuve que hacer este "Regex" ya que cuando me traigo el precio desde la API, viene con un "$" incluido (ejemplo: "$50.50"), entonces el reduce no anda porque en vez de hacer: "50.50 + 50.50" quiere hacer "$50.50 + $50.50". Encontré por internet este método (*precio*.match(regex)) para quedarme sólo con los números y también realizo un parseFloat dentro del reduce ya que si no lo toma como string y sólo concatena los precios dando como resultado "Total a pagar: $50.5050.50,0" en vez de "$101"
-    //Por otro lado, no se "rompe" pero a veces en "Total a pagar" quedan números con muchas comas y el toFixed no me funciona, por ejemplo utilizando el libro "Learning Go" y "Introduction to Autonomous Robots, 3rd Edition", el tercer y cuarto libro.
+    //Tuve que hacer este "Regex" ya que cuando me traigo el precio desde la API viene con un "$" incluido (ejemplo: "$50.50") y el reduce no anda porque en vez de hacer: "50.50 + 50.50" quiere hacer "$50.50 + $50.50". Encontré por internet este método (*precio*.match(regex)) donde regex=/(\d.+)/g para quedarme sólo con los números y también realizo un parseFloat dentro del reduce ya que si no lo toma como string y sólo concatena los precios dando como resultado "Total a pagar: $50.5050.50,0" en vez de "$101"
+    //Por otro lado, no se "rompe" pero a veces en "Total a pagar" quedan números con muchas comas (por ejemplo utilizando el libro "Learning Go" y "Introduction to Autonomous Robots, 3rd Edition", el tercer y cuarto libro.) y el toFixed(x) no me funciona
 
     if (carrito.length !== 0){
         let regex = /(\d.+)/g;
@@ -138,7 +138,5 @@ function comprar(){
 }
 
 
-
 generarItem();
 precioTotalYBotones();
-//remover();
